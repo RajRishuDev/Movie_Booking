@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use("/api/admin", adminRouter);
-app.use("/api/user", userRouter);
+app.use("/api/", userRouter);
 app.use("/api/movie", movieRouter);
 app.use("/api/booking", bookingRouter);
 

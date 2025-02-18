@@ -1,11 +1,13 @@
 import Movie from "../models/Movies.js";
+import { authenticateToken } from "../middleware/auth.js";
+
 export const getMovies = async (req, res) => {
   try {
     const movies = await Movie.find();
-    res.status(200).json(movies);
+    res.status(200).json({ success: true, data: movies });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
@@ -15,13 +17,15 @@ export const getMovieById = async (req, res) => {
     const movie = await Movie.findById(id);
 
     if (!movie) {
-      return res.status(404).json({ message: "Movie not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "Movie not found" });
     }
 
-    res.status(200).json(movie);
+    res.status(200).json({ success: true, data: movie });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
@@ -40,10 +44,10 @@ export const addMovie = async (req, res) => {
     });
     await movie.save();
     console.log("Movie details created successfully");
-    res.status(201).json(movie);
+    res.status(201).json({ success: true, data: movie });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
@@ -60,13 +64,15 @@ export const updateMovie = async (req, res) => {
     );
 
     if (!movie) {
-      return res.status(404).json({ message: "Movie not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "Movie not found" });
     }
 
-    res.status(200).json(movie);
+    res.status(200).json({ success: true, data: movie });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
 
@@ -76,12 +82,19 @@ export const deleteMovie = async (req, res) => {
     const movie = await Movie.findByIdAndDelete(id);
 
     if (!movie) {
-      return res.status(404).json({ message: "Movie not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "Movie not found" });
     }
 
-    res.status(200).json({ message: "Movie deleted successfully" });
+    res
+      .status(200)
+      .json({ success: true, message: "Movie deleted successfully" });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: error.message });
+    res.status(500).json({ success: false, message: error.message });
   }
 };
+
+// Example of how to use the middleware in routes (should be in routes file):
+// router.get("/movies", authenticateToken, getMovies);

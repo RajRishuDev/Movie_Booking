@@ -1,14 +1,14 @@
 const moviesList = [
   {
     title: "Inception",
-    description:"Inception is a mind-bending science fiction thriller directed by Christopher Nolan. It stars Leonardo DiCaprio as Dom Cobb, a skilled thief who steals secrets by infiltrating the subconscious minds of his targets. Cobb is given a chance to have his criminal record erased if he can successfully plant an idea in someone's mind, a process known as inception. The film takes the audience on a journey through multiple layers of dreams within dreams, where the boundaries between reality and imagination blur. With its complex narrative structure, stunning visual effects, and thought-provoking themes, ",
+    description:
+      "A skilled thief is given a chance at redemption if he can successfully perform an inception.",
     genre: "Science Fiction",
     poster: "https://image.tmdb.org/t/p/w500/8bxMHkQ36QHmwENG6SDAjQqZQ6L.jpg",
     featured: true,
     releaseDate: "2010-07-16T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.8,
   },
   {
     title: "The Dark Knight",
@@ -20,7 +20,6 @@ const moviesList = [
     releaseDate: "2008-07-18T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.9,
   },
   {
     title: "The Matrix",
@@ -32,7 +31,6 @@ const moviesList = [
     releaseDate: "1999-03-31T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.7,
   },
   {
     title: "The Shawshank Redemption",
@@ -44,7 +42,6 @@ const moviesList = [
     releaseDate: "1994-09-23T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.9,
   },
   {
     title: "Pulp Fiction",
@@ -56,7 +53,6 @@ const moviesList = [
     releaseDate: "1994-10-14T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.8,
   },
   {
     title: "Fight Club",
@@ -68,7 +64,6 @@ const moviesList = [
     releaseDate: "1999-10-15T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.7,
   },
   {
     title: "Forrest Gump",
@@ -80,7 +75,6 @@ const moviesList = [
     releaseDate: "1994-07-06T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.8,
   },
   {
     title: "Interstellar",
@@ -92,7 +86,6 @@ const moviesList = [
     releaseDate: "2014-11-07T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.6,
   },
   {
     title: "Gladiator",
@@ -104,7 +97,6 @@ const moviesList = [
     releaseDate: "2000-05-05T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.5,
   },
   {
     title: "The Godfather",
@@ -116,7 +108,6 @@ const moviesList = [
     releaseDate: "1972-03-24T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.9,
   },
   {
     title: "Titanic",
@@ -128,7 +119,6 @@ const moviesList = [
     releaseDate: "1997-12-19T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.7,
   },
   {
     title: "Avatar",
@@ -140,7 +130,6 @@ const moviesList = [
     releaseDate: "2009-12-18T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.8,
   },
   {
     title: "Oppenheimer",
@@ -152,7 +141,6 @@ const moviesList = [
     releaseDate: "2023-07-21T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.6,
   },
   {
     title: "Barbie",
@@ -164,7 +152,6 @@ const moviesList = [
     releaseDate: "2023-07-21T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.2,
   },
   {
     title: "Dune",
@@ -176,7 +163,6 @@ const moviesList = [
     releaseDate: "2021-10-22T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.3,
   },
   {
     title: "Top Gun: Maverick",
@@ -188,7 +174,6 @@ const moviesList = [
     releaseDate: "2022-05-27T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.5,
   },
   {
     title: "Everything Everywhere All at Once",
@@ -200,7 +185,6 @@ const moviesList = [
     releaseDate: "2022-03-25T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.7,
   },
   {
     title: "The Batman",
@@ -212,7 +196,6 @@ const moviesList = [
     releaseDate: "2022-03-04T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.4,
   },
   {
     title: "Spider-Man: Across the Spider-Verse",
@@ -224,7 +207,6 @@ const moviesList = [
     releaseDate: "2023-06-02T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.8,
   },
   {
     title: "Poor Things",
@@ -236,11 +218,7 @@ const moviesList = [
     releaseDate: "2023-12-08T00:00:00Z",
     bookings: [],
     admin: "603d71df810c19729e8f042f",
-    rating: 4.3,
   },
 ];
 
 export default moviesList;
-
-
-
